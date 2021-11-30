@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!--<remote fetch="https://android.googlesource.com/" name="aosp"/>-->
   <remote fetch="https://github.com/microsoft/" name="duo" revision="surfaceduo/10/2021.1019.24"/>
@@ -8,25 +8,30 @@
   <project remote="duo" path="build" name="surface-duo-oss-kernel.build"/>
 
   <!-- kernel source --> 
-  <project remote="duo" path="kernel/msm-4.14" name="surface-duo-oss-kernel.msm-4..14"/>
-  <project remote="duo" path="kernel/msm-4.14/techpack/audio" name="surface-duo-oss-platform.vendor.opensource.audio-kernel"/>
+  <project remote="duo" path="kernel/microsoft/duo" name="surface-duo-oss-kernel.msm-4..14"/>
+  <project remote="duo" path="kernel/microsoft/duo/techpack/audio" name="surface-duo-oss-platform.vendor.opensource.audio-kernel"/>
   <project remote="duo" path="kernel/msm-modules/data-kernel" name="surface-duo-oss-platform.vendor.qcom-opensource.data-kernel"/>
   <project remote="duo" path="kernel/msm-modules/wlan/qca-wifi-host-cmn" name="surface-duo-oss-platform.vendor.qcom-opensource.wlan.qca-wifi-host-cmn"/>
   <project remote="duo" path="kernel/msm-modules/wlan/qcacld-3.0" name="surface-duo-oss-platform.vendor.qcom-opensource.wlan.qcacld-3..0"/>
   <project remote="duo" path="kernel/msm-modules/wlan/fw-api" name="surface-duo-oss-platform.vendor.qcom-opensource.wlan.fw-api"/>
 
-  <!-- Removed for device tree sync only. Using tools from TWRP_Omni Manifest-->
-  <!-- tools from AOSP servers -->
-  <!--<project remote="aosp" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="pie-release" clone-depth="1"/>
+  <!-- Removing Omni Tools. Using tools from this Manifest instead of Omni Manifest-->
+  <remove-project name="platform/prebuilts/misc"/>
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <remove-project name="platform/prebuilts/clang/host/linux-x86" />
+  
+  <!-- tools from AOSP servers Used by Microsoft-->
+  <project remote="aosp" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="pie-release" clone-depth="1"/>
   <project remote="aosp" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="pie-release" clone-depth="1"/>
   <project remote="aosp" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="639243dd5cb2c5ea1313f033c75c8c533813a484" clone-depth="1"/>
   <project remote="aosp" path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" revision="4b1f275e6b3826c86f791ae8c4d5ec3563c2fc11" clone-depth="1"/>
-  <project remote="aosp" path="prebuilts-master/misc" name="platform/prebuilts/misc" revision="pie-release" clone-depth="1"/>-->
-
+  <project remote="aosp" path="prebuilts/misc" name="platform/prebuilts/misc" revision="pie-release" clone-depth="1"/>
+  
   <!-- Qualcomm SD LLVM compiler must be downloaded from https://developer.qualcomm.com/software/snapdragon-llvm-compiler-android/tools (8.0.6) -->
   <!-- <project remote="" path="proprietary/llvm-arm-toolchain-ship" name="sm8150.proprietary.llvm-arm-toolchain-ship" clone-depth="1"/> -->
   
-  <!--Missing Dependencies-->
+  <!--Missing Dependencies for Ninja Make-->
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
   <project path="device/qcom/common" name="android_device_qcom_common" revision="oneplus/QC8998_O_8.1" remote="OnePlus"/>
 </manifest>
