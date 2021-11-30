@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://android.googlesource.com/" name="aosp"/>
+  <!--<remote fetch="https://android.googlesource.com/" name="aosp"/>-->
   <remote fetch="https://github.com/microsoft/" name="duo" revision="surfaceduo/10/2021.1019.24"/>
+  <remote fetch="https://github.com/OnePlusOSS" name="OnePlus"/>
 
   <!-- build scripts -->
   <project remote="duo" path="build" name="surface-duo-oss-kernel.build"/>
@@ -24,4 +25,8 @@
 
   <!-- Qualcomm SD LLVM compiler must be downloaded from https://developer.qualcomm.com/software/snapdragon-llvm-compiler-android/tools (8.0.6) -->
   <!-- <project remote="" path="proprietary/llvm-arm-toolchain-ship" name="sm8150.proprietary.llvm-arm-toolchain-ship" clone-depth="1"/> -->
+  
+  <!--Missing Dependencies-->
+  <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs,pdk-fs" />
+  <project path="device/qcom/common" name="android_device_qcom_common" revision="oneplus/QC8998_O_8.1" remote="OnePlus"/>
 </manifest>
