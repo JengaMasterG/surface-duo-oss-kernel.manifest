@@ -1,4 +1,4 @@
-?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!--<remote fetch="https://android.googlesource.com/" name="aosp"/>-->
   <remote fetch="https://github.com/microsoft/" name="duo" revision="surfaceduo/10/2021.1019.24"/>
