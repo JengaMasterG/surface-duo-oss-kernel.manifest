@@ -13,7 +13,7 @@
   
   <!-- kernel source --> 
   <project remote="duo_twrp" path="kernel/microsoft/duo" name="surface-duo-oss-kernel.msm-4..14"/>
-  <project remote="duo-twrp" path="kernel/microsoft/duo/techpack/audio" name="surface-duo-oss-platform.vendor.opensource.audio-kernel"/>
+  <project remote="duo_twrp" path="kernel/microsoft/duo/techpack/audio" name="surface-duo-oss-platform.vendor.opensource.audio-kernel"/>
   <project remote="duo" path="kernel/msm-modules/data-kernel" name="surface-duo-oss-platform.vendor.qcom-opensource.data-kernel"/>
   <project remote="duo" path="kernel/msm-modules/wlan/qca-wifi-host-cmn" name="surface-duo-oss-platform.vendor.qcom-opensource.wlan.qca-wifi-host-cmn"/>
   <project remote="duo" path="kernel/msm-modules/wlan/qcacld-3.0" name="surface-duo-oss-platform.vendor.qcom-opensource.wlan.qcacld-3..0"/>
