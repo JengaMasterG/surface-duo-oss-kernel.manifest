@@ -8,6 +8,9 @@
   <!-- build scripts -->
   <project remote="duo" path="build" name="surface-duo-oss-kernel.build"/>
 
+  <!-- device source -->
+  <project remote="duo_twrp" path="device/microsoft/duo" name="device_microsoft_duo"/>
+  
   <!-- kernel source --> 
   <project remote="duo_twrp" path="kernel/microsoft/duo" name="surface-duo-oss-kernel.msm-4..14"/>
   <project remote="duo" path="kernel/microsoft/duo/techpack/audio" name="surface-duo-oss-platform.vendor.opensource.audio-kernel"/>
